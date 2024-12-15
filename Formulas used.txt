@@ -1,0 +1,4 @@
+NPS = IF(General[NPS Rating]>8,"Promoters",IF(General[NPS Rating]<7,"Detractors","Passives"))
+NPS Detractors % = (CALCULATE(COUNT(General[NPS Rating]),General[NPS Rating]>8/COUNT(General[NPS Rating]))*100)
+NPS Promoter% = (CALCULATE(COUNT(General[NPS Rating]),General[NPS Rating]>8/COUNT(General[NPS Rating]))*100)
+NPS Score = General[NPS Promoter%] - General[NPS Detractors %]
